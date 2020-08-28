@@ -4,6 +4,7 @@
 body,html{
     padding: 0;
     margin: 0;
+    width: 100% !important;
     font-family: 'Roboto', sans-serif;
 }
 *{
@@ -13,6 +14,32 @@ body,html{
     max-width: 73%;
     margin: 0 auto;
 }
+@media only screen and (max-width:1000px){
+    .mw-73{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:925px){
+    .mw-73{
+        max-width: 85%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:600px){
+    .mw-73{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:400px){
+    .mw-73{
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
 .d-flex{
     display: flex;
     justify-content: center;
@@ -29,6 +56,7 @@ body,html{
 }
 .top-nav-contaner i{
     margin-left: .8rem;
+    font-size: 1em;
 }
 .top-nav-login{
     text-transform: capitalize;
@@ -46,11 +74,18 @@ body,html{
     padding-left: .625rem;
     margin: 0;
 }
-
+@media only screen and (max-width: 350px){
+    .top-nav-contaner{
+        font-size: 13px;
+    }
+}
 
 .header{
     justify-content: space-between;
     font-size: 16px;
+}
+.header-container {
+    justify-content: space-between;
 }
 .header-left-main p{
     margin: 0;
@@ -65,7 +100,7 @@ body,html{
    
 }
 i.fas.fa-mobile-alt {
-    font-size: 2rem;
+    font-size: 2em;
     margin-right: .3rem;
 }
 h1.header-center.logo {
@@ -84,6 +119,7 @@ h1.header-center.logo {
     background-color: unset;
     align-items: center;
     outline: none;
+    overflow: hidden;
 }
 .header-right-search input {
     font-size: 0.75rem;
@@ -93,13 +129,96 @@ h1.header-center.logo {
     outline: none;
     padding-left: .5rem;
 }
+@media only screen and (max-width: 1070px){
+    .header{
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    .header-right-search {
+        width: 10.123rem;
+    }
+}
+@media only screen and (max-width: 845px){
+    .header{
+        justify-content: space-between;
+        font-size: 10px;
+    }
+    .header-right-search {
+        width: 9.123rem;
+    }
+}
 
+@media only screen and (max-width: 700px){
+    .header{
+        justify-content: space-between;
+        font-size: 8px;
+    }
+    .header-right-search {
+        width: 8.123rem;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .header{
+        justify-content: space-between;
+        font-size: 6px;
+    }
+    .header-right-search {
+        width: 6.123rem;
+        height: 1.5rem;
+        padding-left: .7rem;
+    }
+    i.fas.fa-search {
+        font-size: .7rem;
+    }
+}
+@media only screen and (max-width: 370px){
+    .header-right-search {
+        width: 4.123rem;
+        height: 1.5rem;
+        padding-left: .7rem;
+    }
+    i.fas.fa-search {
+        font-size: .5rem;
+    }
+    .header-right-search input {
+        font-size: 0.6em;
+        border: none;
+        background-color: none;
+        color: #ababab;
+        outline: none;
+        padding-left: .5rem;
+    }
+}
+@media only screen and (max-width: 310px){
+    .header{
+        justify-content: space-between;
+        font-size: 5px;
+    }
+    .header-right-search {
+        width: 3.123rem;
+        height: 1.3rem;
+        padding-left: .3rem;
+    }
+    i.fas.fa-search {
+        font-size: .4rem;
+    }
+    .header-right-search input {
+        font-size: 0.5em;
+        border: none;
+        background-color: none;
+        color: #ababab;
+        outline: none;
+        padding-left: .5rem;
+    }
+}
 
 .navbar {
     margin-top: 2rem ;
     justify-content: space-between;
     font-size: 16px;
 }
+
 .navbar-container a {
     font-size: .8em;
     text-decoration: none;
@@ -109,12 +228,102 @@ h1.header-center.logo {
 }
 .cart p {
     margin: 0;
+    font-size: .8em;
     text-transform: capitalize;
     margin-left: .3rem;
 }
 .cart img{
     height: 1.2rem;
 }
+@media only screen and (max-width: 1055px){
+    .navbar-container a {
+        font-size: 0.75em;
+        color: black;
+        text-transform: capitalize;
+        margin-right: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 990px){
+    .navbar-container a {
+        font-size: 0.7em;
+        color: black;
+        text-transform: capitalize;
+        margin-right: 0.3rem;
+    }
+    .cart p {
+        margin: 0;
+        font-size: .7em;
+        text-transform: capitalize;
+        margin-left: .3rem;
+    }
+    .cart img{
+        height: 1rem;
+    }
+}
+.fa-bars{
+    font-size: 1.3rem;
+    display: none !important;
+
+}
+.fa-times{
+    display: none !important;
+}
+@media only screen and (max-width:860px){
+    .navbar-container {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 50%;
+       height: 100%;
+       background-color: #6fb07f;
+       display: flex;
+       padding-left: 2rem;
+       flex-direction: column;
+       z-index: 1000;
+       transform: translateX(-100%);
+       transition: all 1s;
+    }
+    .fa-bars{
+        display: block !important;
+    
+    }
+    .fa-times{
+        display: block !important;
+    }
+    .navbar-container a {
+        font-size: 1em;
+        text-transform: capitalize;
+        margin: 0;
+        padding: .2rem;
+        margin: .3rem 0;
+    }
+    .fa-times{
+        text-align: right;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+}
+@media only screen and (max-width:710px){
+    .navbar-container {
+      width: 60%;
+    }
+}
+@media only screen and (max-width:400px){
+    .navbar-container {
+      width: 80%;
+    }
+}
+@media only screen and (max-width:360px){
+    .navbar-container {
+      width: 100%;
+    }
+}
+
+
+
+
 .wrapper{
     font-size: 16px;
     flex-flow: wrap;
@@ -130,6 +339,7 @@ h1.header-center.logo {
     justify-content: space-between;
     margin:  1.5rem 0;
     width: 100%;
+    flex-flow: wrap;
 }
 .top-wrapper p{
     line-height: 0px;
@@ -173,20 +383,20 @@ h1.header-center.logo {
 }
 .wrapper-left h1{
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: .9em;
     font-weight: 200;
 }
 .wrapper-left p:nth-child(2){
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 700;
 }
 .wrapper-left p:nth-child(3){
     text-transform: capitalize;
-    font-size: .8rem;
+    font-size: .8em;
 }
 .wrapper-left i{
-    font-size: .8rem;
+    font-size: .8em;
     text-align: center;
     padding: .2rem .3rem;
     border: 1px solid #000;
@@ -214,6 +424,99 @@ font-family: 'Dancing Script', cursive;
     border: 1px solid #000;
     border-radius: 15px;
 }
+@media only screen and (max-width:915px){
+    .wrapper-left h1 {
+        font-size: .8em;
+    }
+    .wrapper-left p:nth-child(2) {
+        font-size: 1em;
+    }
+    .wrapper-left p:nth-child(3) {
+        font-size: .7em;
+    }
+    .wrapper-left i {
+        font-size: .7em;
+        padding: .15rem .2rem;
+    }
+}
+@media only screen and (max-width:850px){
+    .wrapper-container {
+        font-size: 14px;
+
+    }
+}
+@media only screen and (max-width:754px){
+    .wrapper-container {
+        font-size: 13px;
+
+    }
+}
+@media only screen and (max-width:710px){
+    .wrapper-container {
+        font-size: 12px;
+
+    }
+}
+@media only screen and (max-width:680px){
+    .wrapper-container {
+        font-size: 10px;
+
+    }
+}
+@media only screen and (max-width:545px){
+    .wrapper-left * {
+        margin: .2rem 0;
+    }
+    .top-wrapper-like.d-flex {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width:465px){
+    .top-wrapper > div{
+        width: 100%;
+        margin-top: 0 !important;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem !important;
+    }
+ }
+ @media only screen and (max-width:440px){
+    .wrapper-right-content > * {
+        margin: .4rem 0;
+    }
+    .wrapper-left h1 {
+        font-size: .6em;
+    }
+    .wrapper-left p:nth-child(2) {
+        font-size: .7em;
+    }
+    .wrapper-left p:nth-child(3) {
+        font-size: .5em;
+    }
+    .wrapper-left i {
+        font-size: .5em;
+        padding: .1rem .12rem;
+    }
+    .wrapper-right-content h1 {
+        font-size: 1.2em;
+    }
+    .wrapper-right-btn {
+        font-size: .4rem;
+        padding: .3rem .4rem;
+    }
+ }
+@media only screen and (max-width:373px){
+   .top-wrapper > div{
+       width: 100%;
+       margin-top: 0;
+       margin-bottom: 1rem !important;
+   }
+}
+
+
+
+
 
 .product-container{
     font-size: 16px;
@@ -273,12 +576,61 @@ font-family: 'Dancing Script', cursive;
     color: #000;
     text-decoration: none;
 }
+@media only screen and (max-width:1095px){
+    .product {
+        max-width: 25%;
+        padding: 1rem 0rem;
+    }
+    .product-container > h1 {
+        text-align: center;
+    }
+ }
+ @media only screen and (max-width:680px){
+    .product {
+        max-width: 33.33333333333%;
+    }
+ }
+ 
+ @media only screen and (max-width:475px){
+    .product {
+        max-width: 50%;
+    }
+ }
+ 
+ @media only screen and (max-width:300px){
+    .product {
+        max-width: 80%;
+    }
+ }
+ 
+
+.footer {
+    margin-top: 3.75rem;
+    background-color: #f2f2f2;
+    padding-top: 4.7rem;
+    font-size: 16px;
+}
 .footer-main{
     justify-content: space-between;
-    font-size: 16px;
+    align-items: flex-start;
+    padding-bottom: 4.1rem;
+    flex-flow: wrap;
+}
+.footer-main *{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #000000;
+}
+.footer-main h1{
+   font-size: 1rem;
+   font-weight: 900;
+   color: #000;
+   margin-bottom: 1rem;
 }
 .footer-main > div{
     flex: 1;
+    box-sizing: border-box;
+    padding: 0 1rem;
 }
 .footer-main-link{
     flex-direction: column;
@@ -286,14 +638,17 @@ font-family: 'Dancing Script', cursive;
 }
 .footer-main-link a{
    text-decoration: none;
-   color: #000;
    font-size: .8125em;
-   margin-bottom: .3rem;
+   margin-bottom: .5rem;
+   text-transform: capitalize;
 }
 
 .footer-main-infor{
-    color: #000;
+    text-align: center;
     font-size: .8125em;
+}
+.footer-main-connected{
+    text-align: center;
 }
 .footer-main-connected p{
     color: #000;
@@ -306,11 +661,117 @@ font-family: 'Dancing Script', cursive;
     display: flex;
     align-items: flex-start;
     text-transform: capitalize;
-    font-weight: 400;
 
 }
 .footer-main-testimonials span {
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 29px;
     padding-right: .2rem;
 }
+.footer-main-connected {
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+.footer-main-connected input, .footer-main-connected button{
+    font-size: .7125em;
+    height: 2rem;
+    width: 13rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    margin-bottom: .7rem;
+    border: 1px solid #ababab;
+    border-radius: 15px;
+    outline: none;
+    
+}
+.footer-main-connected button{
+    background-color: #6fb07f;
+    text-align: center;
+    text-transform: capitalize;
+    color : #ffff;
+}
+.footer-main-testimonials {
+    text-align: end;
+}
+
+.footer-bottom{
+    justify-content: space-between;
+    color: #ababab;
+}
+.footer-bottom p{
+    font-size: .8em ;
+}
+.footer-bottom-right i{
+    margin-left: .4rem;
+}
+
+@media only screen and (max-width:895px){
+    .footer-main-testimonials {
+        flex: unset !important;
+        text-align: start; 
+    }
+    .footer-main-connected {
+        text-align: end;
+    }
+}
+@media only screen and (max-width:685px){
+    .footer-main > div {
+        flex: unset !important;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+    .footer-main-infor {
+        text-align: end;
+    }
+    .footer-main-connected {
+        text-align: start;
+    }
+    .footer-main-testimonials {
+        text-align: end;
+    }
+}
+@media only screen and (max-width:510px){
+    .footer-main > div {
+        flex: unset !important;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+    .footer-main-link.d-flex {
+        align-items: center;
+    }
+}
+@media only screen and (max-width:300px){
+    .footer {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width:500px){
+    .footer-bottom-left img {
+        width: 4rem;
+    }
+}
+
+@media only screen and (max-width:430px){
+    .footer-bottom-left img {
+        width: 3rem;
+    }
+    .footer-bottom p {
+        font-size: .7em;
+    }
+    .footer-bottom-right i {
+        margin-left: .2rem;
+    }
+}
+@media only screen and (max-width:330px){
+    .footer-bottom-left img {
+        width: 2.5rem;
+    }
+    .footer-bottom p {
+        font-size: .6em;
+    }
+}
+
+
